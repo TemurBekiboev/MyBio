@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Deploy when changes are pushed to the main branch
+      - main  # Deploy when changes are pushed to main
 
 jobs:
   deploy:
@@ -16,5 +16,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          token: ${{ secrets.GH_PAT }}  # Use the secret token
           branch: gh-pages  # The branch where the site will be deployed
-          folder: .  # The folder containing the site files
+          folder: .  # The folder containing your site files
