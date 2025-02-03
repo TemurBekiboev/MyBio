@@ -16,6 +16,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          token: ${{ secrets.GH_PAT }}  # Use the secret token
+          token: ${{ secrets.MY_BIO }}  # Use the secret token
           branch: gh-pages  # The branch where the site will be deployed
           folder: .  # The folder containing your site files
